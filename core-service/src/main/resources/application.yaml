@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /core-service
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/calc-dish
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+springdoc:
+  swagger-ui:
+    path: /swagger/swagger-ui.html
+  api-docs:
+    path: /api/v1/api-docs
