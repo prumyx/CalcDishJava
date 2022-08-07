@@ -20,5 +20,5 @@ spring:
           predicates:
             - Path=/core/**
           filters:
-            - PrefixPath=/core-service
             - StripPrefix=1
+            - PrefixPath=/core-service
